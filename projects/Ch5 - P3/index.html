@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Chapter 5 - Project 3</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="ch05-proj3.css" />
+
+    <script>
+      function clearForm() {
+        document.getElementById("travelForm").reset();
+      }
+
+      function submitForm() {
+        var form = document.getElementById("travelForm");
+        var formData = new FormData(form);
+        var output = "";
+
+        // Create an array to store the values of checked checkboxes for 'creatice_commons_types'
+        var creativeCommonsTypes = [];
+
+        // Iterate through FormData entries
+        for (var pair of formData.entries()) {
+          if (pair[0] === "creatice_commons_types") {
+            // Add the value to the array instead of directly to output
+            creativeCommonsTypes.push(pair[1]);
+          } else {
+            // For all other fields, add them directly to the output
+            output += pair[0] + ": " + pair[1] + "\n";
+          }
+        }
+
+        // If there are any checked 'creatice_commons_types' checkboxes, add them to the output
+        if (creativeCommonsTypes.length > 0) {
+          output +=
+            'creatice_commons_types: ["' +
+            creativeCommonsTypes.join('", "') +
+            '"]\n';
+        }
+
+        // Display the output in a new window
+        var newWindow = window.open("", "_blank");
+        newWindow.document.write("<pre>" + output + "</pre>");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Share Your Travels</h1>
+      <p>let us know where you've been</p>
+    </header>
+
+    <main>
+      <section>
+        <form id="travelForm">
+          <fieldset>
+            <legend>Photo Details</legend>
+
+            <table>
+              <tbody>
+                <!-- title -->
+                <tr>
+                  <td>
+                    <label for="title">Title</label>
+                    <input
+                      type="text"
+                      id="title"
+                      name="title"
+                      placeholder="Give your places a descriptive name"
+                    />
+                  </td>
+                </tr>
+
+                <!-- description -->
+                <tr>
+                  <td>
+                    <label for="description">Descriptioan</label>
+                    <textarea
+                      type="text"
+                      id="description"
+                      name="description"
+                      rows="4"
+                      placeholder="Adding a rich decription will help with search result"
+                    ></textarea>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <!-- coninent -->
+                    <div class="row">
+                      <label for="continet">Continet</label>
+                      <select name="continet" id="continet">
+                        <option>Choose continent</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Europe">Europe</option>
+                        <option value="North America">North America</option>
+                        <option value="South America">South America</option>
+                        <option value="Australia/Oceania">
+                          Australia/Oceania
+                        </option>
+                        <option value="Antartica">Antartica</option>
+                      </select>
+                    </div>
+                    <!-- country -->
+                    <div class="row">
+                      <label for="country">Country</label>
+                      <select name="country" id="country">
+                        <option>Choose country</option>
+                        <option value="Canada">Canada</option>
+                        <option value="USA">USA</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Adelaide">Adelaide</option>
+                        <option value="South Korea">South Korea</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="Nigeria">Nigeria</option>
+                      </select>
+                    </div>
+                    <!-- city -->
+                    <div class="row">
+                      <label for="city">City</label>
+                      <input type="text" id="city" name="city" />
+                    </div>
+                  </td>
+                  <td>
+                    <!-- copyright -->
+                    <div class="border">
+                      <label>Copyright?</label>
+
+                      <div class="reset">
+                        <input
+                          type="radio"
+                          id="All Rights Reserved"
+                          name="copyright"
+                          value="All Rights Reserved"
+                          checked
+                        />
+                        <label for="All Rights Reserved"
+                          >All rights reserved</label
+                        >
+                      </div>
+
+                      <div class="reset">
+                        <input
+                          type="radio"
+                          id="Creative Commons"
+                          name="copyright"
+                          value="Creative Commons"
+                        />
+                        <label for="Creative Commons">Creative Commons</label>
+                      </div>
+                    </div>
+                    <!-- creaive commons types -->
+                    <div class="border">
+                      <label>Creative Commons Types</label>
+
+                      <div class="reset">
+                        <input
+                          type="checkbox"
+                          id="cct1"
+                          name="creatice_commons_types"
+                          value="Attribution"
+                        />
+                        <label for="cct1"> Attribution</label>
+                      </div>
+
+                      <div class="reset">
+                        <input
+                          type="checkbox"
+                          id="cct2"
+                          name="creatice_commons_types"
+                          value="Noncommercial"
+                        />
+                        <label for="cct2"> Noncommercial</label>
+                      </div>
+
+                      <div class="reset">
+                        <input
+                          type="checkbox"
+                          id="cct3"
+                          name="creatice_commons_types"
+                          value="No Derivative Works"
+                        />
+                        <label for="cct3"> No Derivateive Works</label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- software license -->
+                <tr>
+                  <td>
+                    <div class="reset withBg">
+                      <label for="licenseTerms">
+                        I accept the software license</label
+                      >
+                      <input
+                        type="checkbox"
+                        id="licenseTerms"
+                        name="licenseTerms"
+                      />
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <!-- rate -->
+                    <div class="row">
+                      <label for="rate">Rate this photo (1-5):</label>
+
+                      <input
+                        type="number"
+                        id="rate"
+                        name="rate"
+                        min="1"
+                        max="5"
+                        class="initial"
+                      />
+                    </div>
+                    <!-- color -->
+                    <div class="row">
+                      <label for="color">Color Collection:</label>
+                      <input
+                        type="color"
+                        id="color"
+                        name="color"
+                        value="#000000"
+                        class="initial"
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="border">
+                      <!-- date taken -->
+                      <div class="row">
+                        <label for="date">Date Taken:</label>
+                        <input id="date" name="date" type="date" />
+                      </div>
+
+                      <!-- time taken -->
+                      <div class="row">
+                        <label for="time">Time Taken:</label>
+                        <input id="time" name="time" type="time" />
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- buttons -->
+                <tr>
+                  <td>
+                    <div class="withBg">
+                      <input
+                        type="button"
+                        value="Submit"
+                        onclick="submitForm()"
+                      />
+                      <input
+                        type="button"
+                        value="Clear Form"
+                        onclick="clearForm()"
+                      />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

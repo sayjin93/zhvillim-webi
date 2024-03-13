@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,maximum-scale=1.0,width=device-width"
+    />
+    <title>Chapter 8 - Project 1</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="js/data.js" type="text/JavaScript"></script>
+    <script src="js/functions.js" type="text/JavaScript"></script>
+  </head>
+
+  <body>
+    <table class="table-fill">
+      <thead>
+        <tr>
+          <th colspan="2">Product</th>
+          <th>#</th>
+          <th>Price</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <script type="text/javascript">
+          let taxRate = 0.1; // 10% tax rate
+          let subtotal = calculateSubtotal(cart);
+          let tax = calculateTax(subtotal, taxRate);
+          let shipping = calculateShipping(cart, subtotal);
+          let grandTotal = calculateGrandTotal(subtotal, tax, shipping);
+
+          for (let i = 0; i < cart.length; i++) {
+            let item = cart[i];
+            let total = calculateTotal(item.quantity, item.product.price);
+            outputCartRow(item, total);
+          }
+
+          // Output subtotal
+          document.write(
+            `<tr class="totals"><td colspan="4">Subtotal</td><td>$${subtotal.toFixed(
+              2
+            )}</td></tr>`
+          );
+
+          // Output tax
+          document.write(
+            `<tr class="totals"><td colspan="4">Tax</td><td>$${tax.toFixed(
+              2
+            )}</td></tr>`
+          );
+
+          // Output shipping
+          document.write(
+            `<tr class="totals"><td colspan="4">Shipping</td><td>$${shipping.toFixed(
+              2
+            )}</td></tr>`
+          );
+
+          // Output grand total
+          document.write(
+            `<tr class="totals"><td colspan="4" class="focus">Grand Total</td><td class="focus">$${grandTotal.toFixed(
+              2
+            )}</td></tr>`
+          );
+        </script>
+      </tbody>
+    </table>
+  </body>
+</html>

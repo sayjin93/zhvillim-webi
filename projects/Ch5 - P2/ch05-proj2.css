@@ -1,0 +1,93 @@
+/* general styles */
+html {
+  height: 100%;
+}
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  height: 100%;
+  background-color: var(--color-support-1-050);
+}
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+
+
+.flex {
+  display: flex;
+  height: 100%;
+  gap: 50px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.form {
+  width: 400px;
+}
+.form h2 {
+  text-align: center;
+  color: var(--color-support-1-600);
+}
+
+.form form {
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 3px;
+  padding: 20px;
+}
+.form form p.error {
+  padding-top: 0;
+  font-size: 12px;
+  color: var(--color-support-2-400);
+}
+.form form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--color-support-1-600);
+}
+
+/* input */
+.form form input {
+  width: 80%;
+  height: 28px;
+  padding: 0 5px;
+  border-radius: 3px;
+  border: 1px solid var(--color-support-1-100);
+}
+.form form input:hover {
+  border: 1px solid var(--color-support-1-200);
+}
+.form form input:active {
+  border: 1px solid var(--color-support-1-300);
+}
+.form form input:invalid {
+  color: var(--color-support-2-400);
+  border-color: var(--color-support-2-400);
+}
+.form form input:focus {
+  outline: none;
+}
+
+/* login button */
+.form form button {
+  cursor: pointer;
+  padding: 10px 20px;
+  min-width: 150px;
+  border-color: transparent;
+  border-radius: 5px;
+  color: var(--color-primary-1-050);
+  background-color: var(--color-support-1-600);
+}
+.form form button:hover {
+  background-color: var(--color-support-1-700);
+}
+.form form button:active {
+  background-color: var(--color-support-1-800);
+}

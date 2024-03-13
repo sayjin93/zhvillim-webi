@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+/* general text formatting */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+nav,
+footer {
+  font-family: Lobster, Cambria, "Times New Roman", serif;
+}
+body {
+  font-family: "Open Sans", Verdana, Arial, sans-serif;
+  font-size: 100%;
+  background-color: #e8eaf6;
+}
+
+/* header and navigation */
+header,
+footer {
+  color: white;
+  background-color: #1a237e;
+  margin: 0em 4em 0.25em 4em;
+}
+header h1 {
+  padding: 0.5rem 0 0 1.25rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+header p {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  padding: 0 0 0 1.25rem;
+}
+
+/* main article styling */
+main {
+  background-color: white;
+  margin: 1em 4em 1em 4em;
+  padding: 1em;
+}
+section {
+  margin-bottom: 1em;
+  width: 100%;
+}
+fieldset {
+  margin: 0;
+  padding: 0;
+  background-color: #c5cae9;
+  width: 100%;
+  border: none;
+}
+legend {
+  font-size: 1.35rem;
+  background-color: #7986cb;
+  color: #e8eaf6;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 5px 0;
+}
+
+/* form */
+form p {
+  margin-top: 0.5em;
+}
+
+form table {
+  width: 100%;
+  border-collapse: collapse;
+}
+form table tr {
+  display: table;
+  width: 100%;
+}
+form table tr td {
+  padding: 10px;
+}
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input:not(.initial),
+form select:not(.initial),
+form textarea:not(.initial) {
+  width: 100%;
+  padding: 5px;
+}
+
+form .row:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+form .border {
+  padding: 10px;
+  border-style: solid;
+  border-color: gray;
+  border-width: 1px 1px 0 1px;
+}
+form .border:last-of-type {
+  border-bottom-width: 1px;
+}
+
+form .reset input {
+  width: initial;
+}
+form .reset label {
+  display: initial;
+  margin: 0;
+}
+
+form .withBg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  background-color: #9fa8da;
+}
+
+form input[type="button"] {
+  width: initial;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: white;
+  background-color: #e91e63;
+  border-color: transparent;
+  border-radius: 3px;
+}
+form input[type="button"]:hover {
+  background-color: #1a237e;
+}

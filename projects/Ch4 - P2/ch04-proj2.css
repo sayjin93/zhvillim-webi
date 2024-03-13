@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+body,
+section,
+header,
+div,
+p,
+h1,
+h2,
+h3,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  background-color: #e4e7eb;
+  font-weight: 300;
+}
+header {
+  margin-left: 20px;
+}
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 42px;
+  padding: 10px 0;
+}
+
+/* add styles here */
+:root {
+  --white: #ffffff;
+  --green: #5bb189;
+  --purple: #4b0082;
+  --orange: #ec632a;
+  --alternative: rgba(47, 59, 64, 0.35);
+  --blueBg: #3a6ba5;
+  --blueHover: #437cbf;
+  --darkGreen: #2f4f4f;
+}
+body {
+  padding: 50px;
+}
+section {
+  margin: 0 auto;
+  width: 910px;
+}
+.column {
+  display: inline-block;
+  width: 300px;
+  background-color: var(--white);
+  text-align: center;
+  box-shadow: 0 0 10px var(--alternative);
+}
+.column.featured {
+  color: var(--white);
+  background-color: var(--darkGreen);
+}
+.column h3 {
+  padding: 8px 0;
+}
+.column .price {
+  font-size: 36px;
+  font-weight: 800;
+}
+.column .price.free {
+  background-color: var(--green);
+}
+.column .price.standard {
+  background-color: var(--purple);
+}
+.column .price.professional {
+  background-color: var(--orange);
+}
+.column .price span {
+  font-size: 18px;
+  font-weight: 400;
+}
+.column ul {
+  list-style-type: none;
+}
+.column ul li {
+  padding: 8px 0;
+}
+.column ul li:nth-child(even) {
+  background-color: var(--alternative);
+}
+.column ul li span {
+  font-weight: 600;
+}
+.column a {
+  display: block;
+  margin: 20px 5px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: var(--blueBg);
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.column a:hover {
+  background-color: var(--blueHover);
+}
+#confidence {
+  margin: 30px auto 0;
+  margin-top: 30px;
+  padding: 20px;
+  width: 910px;
+  color: var(--white);
+  background-color: var(--darkGreen);
+}
+#confidence h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+#confidence p {
+  margin-bottom: 20px;
+}
+#confidence li {
+  background-image: url(checkmark.svg);
+  background-size: 18px;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+#confidence li a {
+  font-weight: 400;
+  text-decoration: none;
+  font-style: italic;
+  color: lightblue;
+}
+#confidence li a:hover {
+  text-decoration: underline;
+}

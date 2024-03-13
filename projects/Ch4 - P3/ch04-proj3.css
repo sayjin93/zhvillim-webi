@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+body,
+section,
+header,
+div,
+p,
+h1,
+h2,
+h3,
+ul,
+li,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  background-color: #f0f4f8;
+  font-weight: 300;
+}
+
+/* add styles here */
+:root {
+  --logo-width: 60px;
+  --nav-left-calc: calc(var(--logo-width) + 40px);
+  --purple: #51279b;
+  --purple-hover: #8662c7;
+}
+a {
+  text-decoration: none;
+}
+/* header */
+header {
+  background-image: url(images/florence.jpg);
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+}
+/* navigation */
+header nav {
+  background: url(images/logo.svg) 0 0 / var(--logo-width) no-repeat;
+  height: var(--logo-width);
+  line-height: var(--logo-width);
+}
+header nav ul {
+  margin-left: var(--nav-left-calc);
+}
+header nav ul li {
+  margin-right: 30px;
+  list-style-type: none;
+  display: inline-block;
+}
+header nav ul li:last-of-type {
+  margin-right: 0;
+}
+header nav ul li a {
+  font-weight: 600;
+  color: var(--purple);
+}
+header nav ul li a:hover {
+  color: var(--purple-hover);
+}
+/* hero div */
+header div {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  margin-left: var(--nav-left-calc);
+}
+header div h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+header div p {
+  font-size: 24px;
+}
+header div a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: white;
+  background-color: var(--purple);
+}
+header div a:hover {
+  background-color: var(--purple-hover);
+}
+/* main */
+main {
+  padding: 10px;
+}
+/* card */
+.card {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(33.333% - 3px);
+  background-color: white;
+}
+.card img {
+  width: 100%;
+}
+.card div {
+  padding: 10px;
+}
+.card div h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.card div .description {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.card div .social {
+  font-size: 10px;
+}
+.card div .social span {
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-left: 20px;
+}
+.card div .social span.heart {
+  background-image: url(images/heart.png);
+}
+.card div .social span.comment {
+  margin-left: 20px;
+  background-image: url(images/comment.png);
+}

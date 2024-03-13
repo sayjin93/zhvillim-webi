@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Chapter 5 - Project 2</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="variables-palette-7.css" />
+    <link rel="stylesheet" href="ch05-proj2.css" />
+  </head>
+  <body>
+    <div class="flex">
+      <div class="form">
+        <h2>Sign in to your account</h2>
+        <form>
+          <p>
+            <label>Email</label>
+            <input type="email" name="email" value="info@jkruja.com" />
+          </p>
+          <p>
+            <label>Password</label>
+            <input type="password" name="password" />
+          </p>
+          <button>Login</button>
+        </form>
+      </div>
+      <div class="form">
+        <h2>Sign in to your account</h2>
+        <form>
+          <p>
+            <label>Email</label>
+            <input type="email" name="email" value="jkruja" />
+          </p>
+          <p>
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              value="jurgenkruja"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            />
+          </p>
+          <p class="error">
+            Invalid email or password! <br />Password must contain at least one
+            number and one uppercase and lowercase letter, and at least 8 or
+            more characters.
+          </p>
+          <button>Login</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
