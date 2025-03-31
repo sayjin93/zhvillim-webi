@@ -1,0 +1,55 @@
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+
+/* Titulli kryesor */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 16px 0;
+  background-color: #e0f0e0;
+  border-bottom: 2px solid #ccc;
+  text-align: center;
+}
+
+/* Wrapper për kartat */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Card individual */
+.card {
+  border: 2px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  background-color: #fffdf8;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Imazhi në card */
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Titulli brenda kartës */
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+/* Handle */
+.card-handle {
+  font-size: 14px;
+  color: #666;
+}
