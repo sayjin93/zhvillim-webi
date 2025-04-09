@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-title Fshirja e Kredencialeve GitHub - JK
+title GitHub account unlink - JK
 
 echo.
 echo ╔════════════════════════════════════════════════════════════════╗
