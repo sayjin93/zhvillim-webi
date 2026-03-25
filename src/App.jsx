@@ -8,7 +8,7 @@ function getRandomAnimal() {
   return animals[Math.floor(Math.random() * animals.length)];
 }
 
-function App() {
+const App = () => {
   const [animals, setAnimals] = useState([]);
 
   const handleClick = () => {
@@ -25,6 +25,6 @@ function App() {
       <div className="animal-list">{renderedAnimals}</div>
     </div>
   );
-}
+};
 
 export default App;

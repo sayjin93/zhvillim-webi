@@ -1,16 +1,17 @@
 import "./AnimalShow.css";
+
 import { useState } from "react";
 
-// Importing SVG images for different animals
-import bird from "./svg/bird.svg";
-import cat from "./svg/cat.svg";
-import cow from "./svg/cow.svg";
-import dog from "./svg/dog.svg";
-import gator from "./svg/gator.svg";
-import heart from "./svg/heart.svg";
-import horse from "./svg/horse.svg";
+// Importojmi SVG-të për secilin lloj kafshe
+import bird from "./assets/bird.svg";
+import cat from "./assets/cat.svg";
+import cow from "./assets/cow.svg";
+import dog from "./assets/dog.svg";
+import gator from "./assets/gator.svg";
+import horse from "./assets/horse.svg";
+import heart from "./assets/heart.svg";
 
-// Mapping animal types to their respective SVG images
+// Krijojmë një objekt që lidh emrin e kafshës me SVG-në përkatëse
 const svgMap = {
   bird,
   cat,
@@ -20,7 +21,7 @@ const svgMap = {
   horse,
 };
 
-function AnimalShow({ type }) {
+const AnimalShow = ({ type }) => {
   const [clicks, setClicks] = useState(0);
 
   const handleClick = () => {
@@ -38,6 +39,6 @@ function AnimalShow({ type }) {
       />
     </div>
   );
-}
+};
 
 export default AnimalShow;
